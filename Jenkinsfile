@@ -1,5 +1,11 @@
 node('MAVEN') {
 
+    parameters {
+ 
+            choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
+    }       
+        
    stage('SCM') {
       // git clone
 	  git 'https://github.com/AshishRaipure/spring-petclinic-1.git'
